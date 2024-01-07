@@ -9,6 +9,12 @@ function App() {
   const [isCorrect, setIsCorrect] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+
+  useEffect(() => {
+    // Using selectedOption in an effect
+    console.log(selectedOption);
+  }, [selectedOption]);
+
   useEffect(() => {
     getDataFromApi();
   }, []);
